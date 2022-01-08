@@ -22,18 +22,21 @@ while True:
     name += ".txt"
     file = open(name, "w")
     write()
+    file.close()
 
   elif selection == 2:
     name2 = input("Enter the name of the text file you would like to add data to the end to: ")
     name2 += ".txt"
     file = open(name2, "a")
     write()
+    file.close()
 
   elif selection == 3:
     name3 = input("Enter the name of the text file you would like to read from: ")
     name3 += ".txt"
     file = open(name3, "r")
     print(file.read())
+    file.close()
   
   elif selection == 4:
     name4 = input("Enter the name of the text file you would like to find things from: ")
@@ -44,6 +47,7 @@ while True:
       if find in row:
         print('Found row from "' + find + '":')
         print(row)
+    file.close()
 
   elif selection == 5:
     print("See you later!")
